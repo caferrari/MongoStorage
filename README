@@ -1,0 +1,8 @@
+Simple File Storage classes for MongoDB+GridFS
+
+Classes:
+
+- LazyConnection: Provides lazy connection support for MongoDB
+- Storage: The storage class =) 
+
+See how it works at test files, enjoy!
