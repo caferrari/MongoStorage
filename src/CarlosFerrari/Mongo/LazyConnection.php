@@ -23,10 +23,8 @@ class LazyConnection
     }
     
     public function connect(){
-        if (!$this->isConnected()){
+        if (!$this->isConnected())
             $this->mongo = new Mongo($this->server, $this->options);
-            $this->connected = true;
-        }
         return $this->connected = true;;
     }
     
