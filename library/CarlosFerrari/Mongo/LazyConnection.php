@@ -46,7 +46,7 @@ class LazyConnection
                         return $this->connected = true;
                     }
                 } catch (Exception $e) { }
-                sleep(1);
+                usleep(200000);
             }
             throw new Exception("Database connection failed");
         }

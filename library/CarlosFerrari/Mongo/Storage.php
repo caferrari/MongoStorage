@@ -34,7 +34,9 @@ class Storage
     }
     
     public function pull($id){
-        return $this->gridFs()->findOne(array('_id' => $id));
+        $grid = $this->gridFs();
+        $grid->setSlaveOkay(true);
+        return $grid->findOne(array('_id' => $id));
     }
 }
 
